@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://teoschifferli.ch/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>valeur.design</title>
+  <meta name="description" content="graphic design | zurich">
+  <meta name="keywords" content="teo schifferli,teo,schifferli,graphic design,graphic,design,grafik,zurich,z&uuml;rich,studiolo">
+
+  <link rel="stylesheet" href="swiper.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+        
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    body {
+        margin: 0 0 0 0;
+        font-family: "Superachachi", serif;
+        font-size: 14.5px;
+        font-weight: normal;
+        line-height: 1.3em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    #explication{
+      margin-left:200px;
+    }
+    
+    .swiper-container {
+      margin-left: 4vw;
+    }
+    
+    .swiper-slide {
+      height: 1000px;
+      width:  400px;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      pointer-events: none;
+    }
+    
+    .swiper-slide.vert {
+      padding: 100px 50px;
+    }
+
+    .interviews {
+      padding: 1.5em;
+      height: calc(88vh);
+      overflow-y: auto;
+      font-size: 0.9em;
+      line-height: 1.3em;
+      width: 24%;
+      float: right;
+    }
+
+    /*    .interviews {
+      padding: 1.5em;
+      height: calc(88vh);
+      overflow-y: auto;
+      font-size: 0.8em;
+      line-height: 1.3em;
+      width: 30%;
+      float: right;
+    }*/
+
+    .flexcontainer .main {
+      width: 80%;
+    }
+
+    
+    .img, .mirror {
+        width: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+        text-align: center;
+        height: 50%;
+        position: relative;
+        padding-bottom: 2.5%;
+    }
+    
+    .loading {
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+    }
+    
+    .mirror {
+      /*transform: scaleY(-1);*/
+      overflow: hidden;
+      position: relative;
+      margin-top: 2.5%;
+      padding-bottom: 0;
+    }
+    
+    .mirror:after {
+      content:"";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(255,255,255, .7) 0%,rgba(255,255,255, .9) 20%, rgba(255,255,255, 1) 40%);
+    }
+    
+    .vert img {
+      position: static;
+    }
+    
+    .mirror img {
+      -o-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+      -moz-transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+      position: static;
+    }
+    
+    .overlay {
+      position: fixed;
+      bottom: 1em;
+      z-index: 9999;
+      padding: 1em;
+    }
+    
+    .overlay .on, body:not(.mobile ) .overlay:hover .out, body.mobile .overlay.hover .out {
+      display: none;
+    }
+    
+    .overlay .on p {
+      background-color: white;
+      padding: .25em .375em;
+      margin: -.25em -.375em;
+    }
+    
+    .overlay .out {
+      font-size: 1.2em;
+    }
+    
+    body:not(.mobile) .overlay:hover .on, body.mobile .overlay.hover .on {
+      display: block;
+    }
+    
+    #contact {
+      left: 1em;
+    }
+    
+    #mail {
+      right: 1em;
+    }
+    
+    .swiper-wrapper {
+      pointer-events: none;
+    }
+    
+    .swiper-pagination {
+      width: 80%;
+      left: 10%;
+      right: 10%;
+      text-align: center;
+      z-index: 999;
+    }
+    
+    .swiper-pagination span {
+      /*background-color: black;*/
+      color: black;
+      font-weight: normal;
+      text-decoration: underline;
+      padding: .25em .2em;
+      line-height: 1.55em;
+      margin-right: 380px;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    p {
+      margin: 0;
+    }
+    
+    img, .out, #mail {
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none;   /* Chrome/Safari/Opera */
+      -khtml-user-select: none;    /* Konqueror */
+      -moz-user-select: none;      /* Firefox */
+      -ms-user-select: none;       /* Internet Explorer/Edge */
+      user-select: none;           /* Non-prefixed version, currently
+                                      not supported by any browser */
+    }
+    
+    @media screen and (max-width: 770px) {
+      
+      .swiper-slide {
+        height: 800px;
+        width:  400px;
+      }
+    
+      .swiper-slide.vert {
+        padding: 80px 40px;
+      }
+
+      body {
+        font-family: "Superachachi", serif;
+        font-size: 12.5px;
+        font-weight: normal;
+        line-height: 1em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        }
+
+      #explication{
+        margin-left:200px;
+      }
+
+      .interviews {
+        padding: 1.5em;
+        height: calc(88vh);
+        overflow-y: auto;
+        font-size: 1em;
+        line-height: 
+      }
+
+    @media screen and (max-width: 480px) {
+      
+      aside.interviews {
+        position: absolute;
+      }
+      .swiper-slide {
+        height: 500px;
+        width:  250px;
+      }
+      .swiper-slide.vert {
+        padding: 40px 20px;
+      }
+      .swiper-pagination {
+        width: 70%;
+        left: 15%;
+        right: 15%;
+        left: calc(3em - 1em);
+        right: calc(3em - 1em);
+        width: calc(100% - 6em);
+      }
+      #contact {
+        left: 0;
+      }
+      #mail {
+        right: 0;
+      }
+    }
+    
+    @media screen and (min-height: 890px) and (min-width: 1400px) {
+      
+      .swiper-slide {
+        height: 1400px;
+        width:  700px;
+      }
+    }
+          
+  </style>
+
+</head>
+<body class="">
+
+  <header class="header cf" role="banner">
+  <!--   <div id="contact" class="overlay">
+      <div class="out">+</div>
+      <div class="on">
+        <p>Ceci est une documentation <br/>
+        sur la technique de la taille douce,<br/>
+        lié au domaine du design de sécurité. <br/>
+        Si vous avez une question, <br/>
+        n'hésitez pas à m'écrire un mail.<br/><br/>
+        Sofia Papaefthymiou<br/>
+        Eracom, Lausanne, Suisse<br/>
+        </p>
+      </div> -->
+    </div>
+
+        <div id="mail" class="overlay"><a href="mailto:papaefthymiousophie@gmail.com">@</a></div>
+       <div id="explication" class="overlay" style="position:center; margin-left:20px; margin-bottom:0px;"><a href="#" onClick="pop()">+</a></div>
+
+<script>
+function pop() {
+window.open('lire.html','text','height=200, width=400, top=100, left=100, padding=300, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no');
+}
+</script>
+
+
+  </header>
+
+<section class="flexcontainer">
+
+  <aside class="interviews">
+  <p>
+      <p style="font-size:16px;">Terry Fernandez</p></br>
+        <p>Est-ce que tu peux me parler de la taille-douce?</p></br>
+        <p>
+          Vers 1450, la gravure était la seule façon de faire des images qui soient reproductibles avec la xylographie. Elle englobait
+plusieurs métiers, notamment celui d’imprimeur taille-doucier et celui
+de graveur. C’était une technique très difficile et longue car tout se faisait
+entièrement à la main. On se servait d’une plaque que l’on gravait par
+différentes méthodes, dont les deux principales étaient mécaniques (par ex: pointe-sèche, burin) ou chimiques (par ex: eau-forte). Il existe plusieurs procédé: la pointe sèche, le burin, l'eau-forte, etc. Le principe d’une presse taille-douce est très simple: deux cylindres en acier posés l’un sur l’autre horizontalement, celui du bas ayant un diamètre plus grand. La plaque est posée sur la table puis passe entre les deux cylindres. Lors de l’impression, la pression se fait sur une très petite ligne d’appui qui n’est que le point de contact entre le cylindre du haut et la plaque. Celui du haut, en acier massif, peut peser jusqu’à près de 500kg en fonction du format de la presse. Les deux cylindres sont serrés à l’aide de vérins à vis. Plus on les serre, plus la pression est élevée, cela peut aller jusqu’à plusieurs tonnes. L’avancée de la table se fait par l’entraînement des cylindres actionnés par une grande roue que
+l’imprimeur taille-doucier tourne à la main. </br>
+ Vers 1840, La gravure a été détrônée par la photographie. La vision de la réalité n’est plus transposée graphiquement et dirèctement sur une matière, en passant par l’esprit d’un graveur, mais passe par une optique projetant l’image sur une surface sensible. Ce n’était plus au graveur de reproduire l’image de la réalité, mais le rôle d’une machine.
+        </p>
+    </br>
+    <p>À quelles fins pratiques-tu la taille-douce?</p></br>
+      <p>
+        Je pratique la taille-douce à des fins artistiques. J’ai appris cette technique avec Raymond Meyer, imprimeur taille-doucier, qui lui a pu collaborer avec Roger Pfund à l’époque, donc j’ai aussi quelques notions de taille-douce industrielle.
+      </p>
+    </br>
+    <p> Qu'est-ce qui t'attire dans cette technique?</p></br>
+      <p>
+        Ce que je trouve fascinant, c'est de mélanger les techniques et procédés. En fait, je crois que les possibilités sont infinies. L'autre jour, j'avais un objet en mousse avec un relief en bosses. Je l'ai enduit d'encre et l'ai passé sous la presse, et bien même ça, ça a donné quelque chose! L’estampe s’impose comme un médium d’une grande qualité et d’un potentiel sans limite.
+      </p>
+      <p>
+        En taille-douce, il existe des encres noires ou colorées. Il est aussi possible de rehausser les estampes imprimées. L'artiste et moi-même réinterprètons l'image (comme une trame en imprimerie). On construit une idée de la réalité.
+      </p>
+    </br>
+      <p>
+        Est-ce que tu penses que la taille-douce est une technique qui pourrait disparaître?
+      </p></br>
+      <p>
+        Non, je ne pense pas. Imagine qu'elle existe déjà depuis 1400, si elle n'était pas si efficace, elle serait se serait effacée très vite et n'existerait plus depuis longtemps je pense… Mais du coup, nous sommes quand même peu à poursuivre cette technique ancestrale, et je tente d'apporter le maximum de mes connaissances, que j'ai moi-même apprises par un maître de la taille-douce, Raymond Meyer. 
+        </br> Certes le numérique s'est développé, mais je pense que ça ne vaut pas la peine d’imiter la taille-douce, mais plutôt de la compléter. C’est drôle, tous ces logiciels de création numérique qui reprennent les anciens termes liés à l’estampe et à l’imprimerie (aquatinte, mezzotinto, manière noire, effet graufrage).
+      </p>
+      </br>
+
+      <p>Rapport entre taille-douce et sécurité, qu'en penses-tu?</p>  </br>
+      <p> Aussi étonnant que cela puisse paraître, l’une des rares applications industrielles pour laquelle la taille-douce est encore sollicitée aujourd’hui est l’impression des papier valeurs; autrement dit, des billets de banque! Ce secteur, qui se doit d’être à la pointe de la technologie d’impression, utilise encore le principe de l’impression taille-douce, vieille de cinq siècles, quoique de manière automatisée et combinée à d’autres techniques modernes afin de garantir un maximum de sécurité. Si la taille-douce est encore utilisée dans ce domaine précis c’est qu’ aujourd’hui aucune autre technique ne peut remplacer sa finesse d'impression ainsi que sa capacité de matérialisation. Son rendu est quasiment irreproductible. Le principe est resté le même; celui d’une matrice gravée donnant un bloc imprimant qui, au contact par pression sur une surface, se matérialise sous la forme d’une empreinte.</p>
+    </br></br></br>
+
+  <p>
+      <p style="font-size:16px;">Guillaume Peitrequin </p>
+    </br>
+      <p>Par sa rareté, sa confidentialité et sa préciosité, tu penses qu’imaginer des designs de sécurité est un prestige?</p></br>
+      C’est surtout un prestige par rapport aux gens que tu côtoies. Des artisans, comme les taille-douciers, ont des notions artisanales qui existent depuis des siècles et qui, à cause du numérique, ont tendance à être oubliées. Il y a une relation intéressante entre la technologie et l’artisanat (artisan de technologie). Il faut un savoir-faire ancestrale, une connaissance ancienne pour pouvoir avancer. Aujourd’hui, on n’invente plus vraiment, on innove sans arrêt.</p>
+
+      Aujourd’hui, il y a tellement d’images et de trends. La taille-douce n’est pas un trend. Documenter et tester cette technique, c’est quitter pendant un moment cette vague de modernité où tout va très vite et où tout a l’air éphémère. Cela te permet de repartir d’une base véritable et d’utiliser les codes de cette technique. Cela a un côté rassurant. Il y a une justesse qui n’est pas remplaçable. </br> En voyant les portraits d’Albrecht Dürer, l’esthétique de la taille-douce vient de ce bagage et elle a une dimension historique. Cette esthétique est restée.
+    </br></br>
+      <p>Le billet va-t-il complètement disparaître?</p></br>
+      (Sourire) Il y a déjà la Suède qui a instauré un système de cartes. Il y a une puce et le design est seulement esthétique, c’est-à-dire qu’à part cette puce, il n’y a pas d’élément de sécurité comme sur un billet. Ce processus engendre une question de confiance; qui dit disparition de la monnaie dit traçabilité.</p>
+    </br>
+      <p>Est-ce que tu penses que le design de sécurité relate d’un aspect utopique ?</p></br>
+      <p>Un peu oui, de toute façon ce n’est pas possible de créer un design dans lequel tout le monde se retrouve. C’est l’acceptation du peuple. La place d’un individu dans un État, la relation du peuple avec le gouvernement. Et puis, la sécurité et l’économie nationale sont un peu le tissu du pays. Mais je dirais que c’est surtout la performance globale du pays qui marque une sécurité nationale.</p>
+ 
+      <p>Je vois le design de sécurité comme un compromis. Si ton design ne fonctionnera pas à l’impression, tu recommences. Tout bouge. La technologie cadre un peu ton travail, c’est une contrainte qui te permet d’avancer.</p>
+      </br>
+      <p>Où se situe la sécurité aujourd’hui?</p>
+    </br>
+      <p> 
+        Tu ne peux pas vérouiller une sécurité par un design. Je pense que le design de sécurité est étroitement lié à la notion de temps. Déjà, plus il y a d’éléments de sécurité sur un billet ou un passeport, plus le faussaire applique du temps à reproduire la pièce. Ensuite, c’est le temps que tu prends à imaginer le design et à l’appliquer. Et pour finir, on renouvelle sans cesse. 
+      </p>
+      </br></br></br>
+</p>
+
+    <p style="font-size:16px;">Pierre Soulages</p></br>
+        Un entretien sur la gravue, Christian Labbaye et Pierre Soulages, janvier 1974. </br>Soulages: Eaux fortes, lithographies – Georges Duby et Christian Labbaye, pages 19–28. 
+    </br></br>
+      <p>
+        En 1951. C'était donc la première fois. Qu'est-ce qui vous a conduit vers ce type d'expression?
+      </p>
+      <p>
+          «À vrai dire, c'est une initiative extérieure, qui répondait à un désir ancien, c'est une initiative de Lacourière, je crois même de Madame Lacourière qui, passant un jour devant la Galerie Carré, a vu l'une de mes peintures en vitrine. Elle m'a dit avec un lapsus dont je me suis toujours souvenu: «J'ai vu une très belle <i>planche</i> de vous…» Ce qu'elle avait vu, c'était quelque chose qui pouvait faire une gravure. </br>(…)
+          </br>C'est comme ça que ça a commencé Ça répondait à un désir ancien, que je n'avais jamais osé réaliser parce que je reculais devant la quantité, l'importance des choses à manipuler, à dominer… Mais je suis allé voir, très soutenu, très encouragé par le désir de l'imprimeur.»
+        </p>
+      </br>
+        <p>
+          «Plus je creusais le cuivre, plus le noir était profond (l'ensemble des traces gravées qui s'organisaient avec ces noirs profonds); mais à force d'approfondir ce noir, brusquement j'ai trouvé la planche, c'est-à-dire que j'ai trouvé le blanc, le blanc du papier à l'impression. À ce moment-là tout a basculé. Alors que dans le procédé habituel il y a continuité… Continuité entre le gris, le gris plus foncé (les valeurs), le noir, le plus noir, l'encore plus noir… brusquement on rencontre le blanc. Il y a un seuil, tout change d'un coup, il y a rupture… et la composition, l'ensemble des rapports, tout est remis en question, et tout repart de là, et c'est extrêmement stimulant.»
+        </p>
+      </br>
+        <p>
+          «C'est une manière des plus stimulantes de travailler, de graver sans être marqué par une idée de ce que l'on croit être ou de ce qu'on voudrait devenir.»
+        </p>
+    </br>
+        <p>
+          «Dans l'impression traditionnelle, on décompose les couleurs en plusieurs planches et on travaille en essayant d'imaginer quelles relations vont se créer dans leurs passages successifs sous la presse. Pour les connaître vraiment, il faut attendre un essai sur papier. Cette manière correspond davantage à la reconstitution d'une œuvre préexistante, à la copie de formes nées d'une autre technique, d'une peinture, d'un dessin, d'une gouache. </br> Par contre, dans ma façon de procéder, j'ai un contact sensible avec ce que je fais; le cuivre que j'ai en main est déjà quelque chose de la furue épreuve imprimée: les creux correspondent à l'encrage habituel à la taille-douce (pour moi, le plus souvent, ce sont les noirs), les reliefs à la couleur qui se déposera ensuite par roulage (encrage semblable à celui de la gravure sur bois). (…), c'est à cause de l'action d'un ensemble de relations sur l'imagination et la sensibilité, sur ce dont je suis conscient et sur ce dont je ne suis pas conscient, action qui éveille le désir d'intensifier, de continuer ou détruire.»
+        </p>
+    </br>
+        <p>
+          «L'imprimeur pour moi est un révélateur, quelqu'un qui me fait voir, m'aide à voir – ou que je pousse à m'aider à voir, ce qui s'est produit sur la planche quand on grave est quelque fois très différent – à l'impression – de ce qu'on imaginait. La planche n'est pas le but, elle est un outil. C'est l'empreinte encrée qui est le but.»
+        </p>
+    </br>
+        <p>
+          «Ce qui me conduit, c'est ce qu'apporte le geste sur la toile, c'est la trace matérielle de ce geste… Ce qui compte, ce n'est pas seulement la direction de mon coup de brosse, mais l'existence matérielle, picturale de cette trace, c'est-à-dire sa surface, sa matière, les rapports qu'elle entretient avec le fond, le contour, ses accidents plus ou moins imprévisibles… (…) Ceci pour la peinture. Pour la gravure, il en va de même, sauf que d'autres agents interviennent: l'acide, le vernis qui écalte, qui saute, qui protège plus ou moins bien, et aussi l'impression, la presse, et dans ce travail-là, ce qui se produit est beaucoup plus lent.»
+        </p>
+</p>
+
+</aside>
+
+<main class="main cf" role="main">
+
+  <!-- Slider main container -->
+
+  <div class="swiper-container swiper-container-horizontal swiper-container-free-mode swiper-container-3d swiper-container-coverflow" style="transform: translateY(-130.375px);">
+
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper" style="transform: translate3d(391px, 0px, 0px); transition-duration: 0ms;">
+
+
+
+  <!-- SLIDESHOW IMAGES -->
+
+                <!-- IMG – Prill Vieceli Cremers, Money -->
+<div class="swiper-slide container" data-caption="<a href='https://www.editionpatrickfrey.com/en/books/money-prill-vieceli-cremers'>Prill Vieceli Cremers, Money</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/01_prill.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='https://www.editionpatrickfrey.com/en/books/money-prill-vieceli-cremers'>Prill Vieceli Cremers, Money</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/02_prill.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='https://www.editionpatrickfrey.com/en/books/money-prill-vieceli-cremers'>Prill Vieceli Cremers, Money</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/03_prill.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='https://www.editionpatrickfrey.com/en/books/money-prill-vieceli-cremers'>Prill Vieceli Cremers, Money</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/04_prill.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='https://www.editionpatrickfrey.com/en/books/money-prill-vieceli-cremers'>Prill Vieceli Cremers, Money</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/05_prill.jpg'></div>
+</div>
+
+
+                <!-- IMG – Albrecht Dürer-->
+<div class="swiper-slide container" data-caption="<a href='http://fivecontinentseditions.com/fr/scheda.php?id=9788874396795'>Albrecht Dürer, xylographie – Saint Michel terrassant le dragon 1498</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/06_durer.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://fivecontinentseditions.com/fr/scheda.php?id=9788874396795'>Albrecht Dürer, xylographie – Joachim et l'Ange 1504</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/07_durer.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://fivecontinentseditions.com/fr/scheda.php?id=9788874396795'>Albrecht Dürer, xylographie – Saint Christophe 1511</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/08_durer.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://fivecontinentseditions.com/fr/scheda.php?id=9788874396795'>Albrecht Dürer, xylographie – l'Annonciation 1510</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/09_durer.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://fivecontinentseditions.com/fr/scheda.php?id=9788874396795'>Albrecht Dürer, xylographie – Samson tuant le lion 1498</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/10_durer.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://fivecontinentseditions.com/fr/scheda.php?id=9788874396795'>Albrecht Dürer, burin – Jésus-Christ devant Caïphe 1512</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/11_durer.jpg'></div>
+</div>
+
+                <!-- IMG – Roger Pfund-->
+<div class="swiper-slide container" data-caption="<a href='http://www.atelierpfund.ch/'>Roger Pfund</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/12_roger.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.atelierpfund.ch/'>Roger Pfund</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/13_roger.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.atelierpfund.ch/'>Roger Pfund</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/14_roger.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.atelierpfund.ch/'>Roger Pfund</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/15_roger.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.atelierpfund.ch/'>Roger Pfund</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/16_roger.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.atelierpfund.ch/'>Roger Pfund</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/17_roger.jpg'></div>
+</div>
+
+<!--<div class="swiper-slide container" data-caption="Roger Pfund" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/7_roger.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Roger Pfund" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/8_roger.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Roger Pfund" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/9_roger.jpg'></div>
+</div> -->
+
+
+                <!-- IMG – Soulages-->
+<div class="swiper-slide container" data-caption="<a href='http://musee-soulages.rodezagglo.fr/oeuvre/eau-forte-xx-1972/'>Pierre Soulages, Eau-forte n°7 (cuivre) 1957 (66×50 cm)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/18_soulages.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://musee-soulages.rodezagglo.fr/oeuvre/eau-forte-xx-1972/'>Pierre Soulages, Eau-forte n°12 (cuivre) 1957 (66×50 cm)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/19_soulages.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://musee-soulages.rodezagglo.fr/oeuvre/eau-forte-xx-1972/'>Pierre Soulages, Lithographie n°2 (3 planches) 1957 (66×50,5 cm)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/20_soulages.jpg'></div>
+</div>
+
+                <!-- IMG – Rembrandt-->
+<div class="swiper-slide container" data-caption="Rembrandt, Nu-tête, 1629 (178×156 mm), gravé avec instrument à double pointe" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/21_rembrandt.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Rembrandt, Adam et Eve, 1638 (161×116 mm)" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/22_rembrandt.jpg'></div>
+</div>
+
+<!-- <div class="swiper-slide container" data-caption="Rembrandt, La Mise au Tombeau n°I, 1645 (211×161 mm)" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/23_rembrandt.jpg'></div>
+</div> --> 
+
+<div class="swiper-slide container" data-caption="Rembrandt, La Mise au Tombeau n°IV, 1645 (211×161 mm)" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/24_rembrandt.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Rembrandt, Pierre et Jean à la porte du Temple, 1630 (221×170 mm)" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/25_rembrandt.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Rembrandt, La Vierge et l'Enfant sur des Nuages, 1641 (166×104 mm)" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/26_rembrandt.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Rembrandt, Saint Jérôme lisant, 1634 (108×90 mm)" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/27_rembrandt.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Rembrandt, Saint Pierre repentant, 1645 (133×117 mm)" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/28_rembrandt.jpg'></div>
+</div>
+
+                <!-- IMG – Terry Fernandez-->
+<div class="swiper-slide container" data-caption="Encrage de la plaque, Terry Fernandez" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/29_terry.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Essuyage à la tarlatane (tissu de coton, enlève 95% encre), </br> Terry Fernandez" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/30_terry.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Essuyage fin à la paume, Terry Fernandez" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/31_terry.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Nettoyage des bords de la plaque, Terry Fernandez" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/32_terry.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Terry Fernandez" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/33_terry.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Terry Fernandez, humidification" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/34_terry.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Terry Fernandez, passage à la presse" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/35_terry.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Terry Fernandez (Le Terme, couverture en taille-douce par J.Rüetschi)" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/36_terry.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Terry Fernandez (Le Terme, couverture en taille-douce par J.Rüetschi)" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/37_terry.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Terry Fernandez, xylographie" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/38_terry.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="Terry Fernandez" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/39_terry.jpg'></div>
+</div>
+
+                <!-- IMG – Back Office-->
+<div class="swiper-slide container" data-caption="<a href='http://www.revue-backoffice.com/numeros/01-faire-avec'>Back office #1</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/40_blackoffice.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.revue-backoffice.com/numeros/01-faire-avec'>Back office #1</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/41_blackoffice.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.revue-backoffice.com/numeros/01-faire-avec'>Back office #1</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/42_blackoffice.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.revue-backoffice.com/numeros/01-faire-avec'>Back office #1</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/43_blackoffice.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.revue-backoffice.com/numeros/01-faire-avec'>Back office #1</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/44_blackoffice.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.revue-backoffice.com/numeros/01-faire-avec'>Back office #1</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/45_blackoffice.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.revue-backoffice.com/numeros/01-faire-avec'>Back office #1</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/46_blackoffice.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.revue-backoffice.com/numeros/01-faire-avec'>Back office #1</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="margin: 0 14.77227%;"><img class="loading" data-src='images/47_blackoffice.jpg'></div>
+</div>
+
+                <!-- IMG – Maximage 2016-->
+<div class="swiper-slide container" data-caption="<a href='http://www.maximage.biz'>Maximage (10LPC Square, Line, Round, Elliptical)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/48_maximage.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.maximage.biz'>Maximage (3LPC et 2LPC Round)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/49_maximage.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.maximage.biz'>Maximage (24LPC et 80LPC Elliptical)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/50_maximage.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.maximage.biz'>Maximage (Moiré Heidelberg 34 LPC)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/51_maximage.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.maximage.biz'>Maximage (Custom Hybrid 12LPC et Elliptical)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/52_maximage.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.maximage.biz'>Maximage (10LPC Square, Line, Round, Elliptical)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/53_maximage.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.maximage.biz'>Maximage (08LPC et 04LPC, Line)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/54_maximage.jpg'></div>
+</div>
+
+<div class="swiper-slide container" data-caption="<a href='http://www.maximage.biz'>Maximage (10LPC Line)</a>" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/55_maximage.jpg'></div>
+</div>
+<!-- <div class="swiper-slide container" data-caption="Maximage 2012" style="opacity: 0; transform: translateZ(-120000px); transition-duration: 0ms;">
+<div class="img" style="width: 100%;"><img class="loading" data-src='images/56_maximage.jpg'></div> -->
+</div>
+
+  </div>
+</div>
+
+
+  <!-- SPAN DESCRIPTION -->
+  <div id="swiper-pagination" class="overlay swiper-pagination swiper-pagination-custom"><span>Taille-douce et design de sécurité</span>
+  </div>
+
+</main>
+
+
+</section> <!-- fin .flexcontainer -->
+  
+  <!-- jQuery -->
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <!-- Swiper JS -->
+<script src="swiper.jquery.min.js"></script>
+<script src="swiper.jquery.teoVersion.js.css"></script>
+<script type="text/javascript">
+    
+    /*
+    $(".swiper-slide").each( function() {
+        
+        var $this = $(this),
+            ar    = $this.data("ar"),
+            h     = $this.height();
+        
+        $this.css("width", ar * h);
+        
+    });
+    */
+  
+    var $container = $(".swiper-container"),
+        $slides = $container.find(".swiper-slide"),
+        subs = [],
+        imgs = [],
+        $win = $(window);
+    
+    var loadImages = function(index) {
+      if (imgs[index] === undefined || imgs[index] === false) return;
+
+      imgs[index][0].attr("src", imgs[index][0].data("src") ).removeClass("loading");
+      imgs[index][1].attr("src", imgs[index][1].data("src") ).removeClass("loading");
+      imgs[index] = false;
+    };
+    
+    var setY = function() {
+      var wH = $win.height(),
+          cH = $container.height(),
+          //tY = ((wH - cH) + 400) / 4;
+          tY = ((wH-(cH/2))/2) - (wH/8);
+          
+      $container.css('transform','translateY(' + tY + 'px)');
+    };
+    
+    setY();
+    
+    $slides.each( function() {
+      var $this = $(this),
+          cap = $this.data('caption'),
+          $imgs = $(this).find("img");
+          
+      subs.push( (cap) ? '<span>' + cap + "</span>" : '');
+      imgs.push( [$imgs.eq(0), $imgs.eq(1)] );
+    });
+    
+    for (var i = 0; i < 6; ++i) {
+      loadImages(i);
+    } 
+    
+    var oldIndex = 5;
+    
+    var ts = new Swiper (".swiper-container", {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: "auto",
+        effect: 'coverflow',
+        pagination: '#swiper-pagination',
+        paginationType: 'custom',
+        paginationCustomRender: function (swiper, current, total) {
+          for (var i = oldIndex, l = current + 5; i < l; ++i) {
+            loadImages(i);
+          }
+          oldIndex = current;
+          return subs[current - 1];
+        },
+        paginationHide: false,
+        keyboardControl: true,
+        centeredSlides: true,
+        speed: $(window).width() / 2,
+        mousewheelControl: true,
+        spaceBetween: 0,
+        freeMode: true,
+        freeModeSticky: true,
+        freeModeMomentumRatio: .25,
+        loop: false,
+        //loopedSlides:
+        coverflow: {
+          rotate: 0,
+          stretch: 0,
+          depth: 800,
+          modifier: 1,
+          slideShadows : false
+        },
+        preloadImages: false,
+        updateOnImagesReady: false
+    });
+    
+    $container.on("click", "img", function() {
+      var index = $(this).parent().parent().index();
+          
+      ts.slideTo(index);
+      for (var i = index, l = index + 6; i < l; ++i) {
+        loadImages(i);
+      }
+    });
+    
+    $("#contact").click( function() {
+      $(this).toggleClass("hover");
+    });
+    
+    $win.resize(setY);
+    
+  </script>
+    
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77522873-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</body>
+</html>

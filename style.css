@@ -1,0 +1,79 @@
+body {
+	font-family: 'Superachachi', serif;
+/*	margin:0; padding:0;*/
+	margin:; 5vmin;
+	font-size: 14.5px;
+    font-weight: normal;
+    line-height: 1.2em;
+/*	text-align: justify; */
+	background-color: #FFF;
+	webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+	font-family: "Superachachi";
+	src: url('Superachachi-Medium.woff');  
+	src: 	
+		local('Superachachi'),
+		local('Superachachi'),
+		url('Superachachi-Medium.woff')
+		format('woff');
+}
+
+/* ESSAI POUR TEXTE EXPLICATIF EN BAS DES IMAGES……………………
+.swiper-pagination{
+	position:absolute;
+	text-align:center;
+	-webkit-transition:.3s;
+} 
+*/
+
+/*for 1400px or less, ordinateur*/
+
+@media screen and (max-width: 400px) {
+
+	#global {
+		width: 100%;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	article {
+		width: 78%;
+	}
+	aside {
+		width: 20%;
+	}
+}
+
+/*for 800px or less, tablettes*/
+
+@media screen and (max-width: 800px) {
+
+	article {
+		width: auto;
+		float: none;
+		padding: 2%;
+		margin-bottom: 2%;
+	}
+	aside {
+		width: auto;
+		float: none;
+		padding: 2%;
+	}
+}
+
+/*for 480px or less, tablettes*/
+
+@media screen and (max-width: 480px) {
+
+	header {
+		height: auto;
+	}
+	h1 {
+		font-size: 34px;
+	}
+	aside {
+		display: none;
+	}
+}
