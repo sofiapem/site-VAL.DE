@@ -21,16 +21,7 @@ body {
 		format('woff');
 }
 
-/* ESSAI POUR TEXTE EXPLICATIF EN BAS DES IMAGES……………………
-.swiper-pagination{
-	position:absolute;
-	text-align:center;
-	-webkit-transition:.3s;
-} 
-*/
-
 /*for 1400px or less, ordinateur*/
-
 @media screen and (max-width: 400px) {
 
 	#global {
@@ -47,7 +38,6 @@ body {
 }
 
 /*for 800px or less, tablettes*/
-
 @media screen and (max-width: 800px) {
 
 	article {
@@ -64,7 +54,6 @@ body {
 }
 
 /*for 480px or less, tablettes*/
-
 @media screen and (max-width: 480px) {
 
 	header {
