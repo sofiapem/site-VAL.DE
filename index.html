@@ -154,20 +154,18 @@
     .swiper-pagination {
       font-size: 0.8em;
       text-align: center;
+      display: block;
       z-index: 999;
       width: 80%;
-      left: 10%;
-      right: 10%;
     }
     
     .swiper-pagination span {
-      /*background-color: black;*/
+      /*background-color: black;
+      margin-right: 380px;*/
       color: black;
-      font-weight: normal;
       text-decoration: underline;
       padding: .25em .2em;
       line-height: 1.55em;
-      margin-right: 380px;
     }
     
     img {
@@ -198,43 +196,14 @@
       user-select: none;           /* Non-prefixed version, currently
                                       not supported by any browser */
     }
-    
-    @media screen and (max-width: 770px) {
-      
-      .swiper-slide {
-        height: 800px;
-        width:  400px;
-      }
-    
-      .swiper-slide.vert {
-        padding: 80px 40px;
-      }
 
-      body {
-        font-family: "Superachachi", serif;
-        font-size: 12.5px;
-        font-weight: normal;
-        line-height: 1em;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        }
 
-      #explication{
-        margin-left:200px;
-      }
 
-      .interviews {
-        padding: 1.5em;
-        height: calc(88vh);
-        overflow-y: auto;
-        font-size: 1em;
-        line-height: 
-      }
-
+    /*for 480px or less, tablettes*/  
     @media screen and (max-width: 480px) {
-      
       aside.interviews {
         position: absolute;
+        display: none;
       }
       .swiper-slide {
         height: 500px;
@@ -258,16 +227,74 @@
         right: 0;
       }
     }
-    
-    @media screen and (min-height: 890px) and (min-width: 1400px) {
-      
-      .swiper-slide {
-        height: 1400px;
-        width:  700px;
+
+    /*for 800px or less, tablettes*/
+    @media screen and (max-width: 800px) {
+        article {
+          width: auto;
+          float: none;
+          padding: 2%;
+          margin-bottom: 2%;
+        }
+        aside.interviews {
+          width: auto;
+          float: none;
+          padding: 2%;
+          display: none;
+        }
+    }
+
+    /*for 1400px or less, ordinateur*/
+    @media screen and (max-width: 400px) {
+        #global {
+          width: 100%;
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+        article {
+          width: 78%;
+        }
+        aside {
+          width: 20%;
+        }
       }
+
+      @media screen and (min-height: 890px) and (min-width: 1400px) {
+        .swiper-slide {
+          height: 1400px;
+          width:  700px;
+        }
     }
           
-  </style>
+    
+  /*  @media screen and (max-width: 770px) {
+      .swiper-slide {
+        height: 800px;
+        width:  400px;
+      }    
+      .swiper-slide.vert {
+        padding: 80px 40px;
+      }
+      body {
+        font-family: "Superachachi", serif;
+        font-size: 12.5px;
+        font-weight: normal;
+        line-height: 1em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        }
+      #explication{
+        margin-left:200px;
+      }
+      aside.interviews {
+        padding: 1.5em;
+        height: calc(88vh);
+        overflow-y: auto;
+        font-size: 1em;
+        line-height: 
+      }
+*/
+</style>
 
 </head>
 <body class="">
