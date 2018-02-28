@@ -12,6 +12,8 @@
  * 
  * Released on: February 7, 2016
  */
+<script type="text/javascript" src="https://example.com/js/main.js"></script>
+ 
 (function () {
     'use strict';
     var $;
